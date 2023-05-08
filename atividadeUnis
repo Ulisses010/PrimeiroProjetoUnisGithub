@@ -1,0 +1,39 @@
+public class POS {
+    public enum Categoria {
+        SUBSTANTIVO,
+        VERBO,
+        ADJETIVO,
+        ADVÉRBIO,
+        PRONOME,
+        PREPOSIÇÃO,
+        CONJUNÇÃO,
+        INTERJEIÇÃO,
+        ARTIGO,
+        NUMERAL,
+        PARTICÍPIO
+    }
+
+    private String palavra;
+    private Categoria categoria;
+
+    public POS(String palavra, Categoria categoria) {
+        this.palavra = palavra;
+        this.categoria = categoria;
+    }
+
+    public String getPalavra() {
+        return palavra;
+    }
+
+    public Categoria getCategoria() {
+        return categoria;
+    }
+
+    public void setCategoria(Categoria categoria) {
+        this.categoria = categoria;
+    }
+
+    public String toString() {
+        return palavra + " (" + categoria + ")";
+    }
+}
